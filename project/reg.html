@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a href="index.html" style="text-decoration: none; color:black"><h1>Ink & Quill</h1></a>
+            <input class="search" type="text" placeholder="Найти" maxlength="50">
+            <div>
+                <a href="fav.html"><img class="img" src="Heart.png"></a>
+                <a href="bag.html"><img class="img" src="Bag.png"></a>
+                <a href="user.html"><img class="img" src="User.png"></a>
+            </div>
+        </div>
+    </header>
+    <div class="login-container">
+        <h2>Регистрация</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input class="userlogin" type="text" id="username" name="username" placeholder="Введите имя" required minlength="3" maxlength="50" pattern="[A-Za-z0-9]+" 
+                title="Допускаются только буквы и цифры.">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input class="pass" type="email" pattern="^\S+@\S+\.\S+$" id="email" name="password" placeholder="Введите email" required minlength="10" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="password-wrapper">Пароль:</label>
+                <input class="pass" type="password" id="password" name="password" placeholder="Введите пароль" required minlength="8" maxlength="50"
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}" title="Пароль должен содержать хотя бы одну заглавную букву, одну строчную букву, одну цифру и быть не менее 8 символов." />
+            </div>
+            <div class="form-group">
+                <label for="password">Дата рождения:</label>
+                <input class="pass" type="date" id="date" name="password" placeholder="Введите дату рождения" required>
+            </div>
+            <div>
+                <p>Я хочу получать уведомления о новинках магазина:</p>
+                <div>
+                    <input type="radio" id="yes" name="check" class="radio" value="yes">
+                    <label for="yes">Да, хочу</label>
+                </div>
+                <div>
+                    <input type="radio" id="no" name="check" class="radio" value="no">
+                    <label for="no">Нет, не хочу</label>
+                </div> 
+            </div>
+            <button type="submit" class="vhod" id="send">Войти</button>
+        </form>
+    </div>
+    <footer style="margin-top: 385px;">
+        <p>&copy; 2023 Все права защищены.</p>
+        <p><a href="#">Контакты</a> | <a href="#">Политика конфиденциальности</a></p>
+        <p>+7(981)948-52-10</p>
+    </footer>
+    <script>
+        let send = document.querySelector('#send')
+        let nameq = document.querySelector('#username')
+        let email = document.querySelector('#email')
+        let password = document.querySelector('#password')
+        let date = document.querySelector('#date')
+        send.addEventListener("click",function(e) {
+            if (email.value != "" && nameq.value != "" && password.value != "" && date.value != "") {
+                alert("Авторизация прошла успешно!")
+                window.location.href = 'index.html';
+            } else {
+                alert("Попробуйте еще раз!")
+            }
+        })
+    </script>
+</body>
+</html>

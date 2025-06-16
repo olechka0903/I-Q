@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a href="index.html" style="text-decoration: none; color:black"><h1>Ink & Quill</h1></a>
+            <input class="search" type="text" placeholder="Найти">
+            <div>
+                <a href="fav.html"><img class="img" src="Heart.png"></a>
+                <a href="bag.html"><img class="img" src="Bag.png"></a>
+                <a href="user.html"><img class="img" src="User.png"></a>
+            </div>
+        </div>
+        <nav>
+            <a href="#">Новинки</a>
+            <a href="#">Бестселлеры</a>
+            <div class="dropdown">
+                <button class="dropbtn">Каталог</button>
+                <div class="dropdown-content">
+                    <div>
+                        <a href="#action and thrillers">Боевики и триллеры</a>
+                        <a href="#detectives">Детективы</a>
+                        <a href="#dramaturgy">Драматургия</a>
+                    </div>
+                    <div>
+                        <a href="#poetry">Поэзия</a>
+                        <a href="#prose">Проза</a>
+                        <a href="#science fiction">Фантастика</a>
+                    </div>
+                    <div>
+                        <a href="#fantasy">Фэнтези</a>
+                        <a href="#novel">Роман</a>
+                        <a href="#horrors">Ужасы</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#">Контакты</a>
+        </nav>
+    </header>
+    <div class="login-container">
+        <h2>Авторизация</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="username">Логин:</label>
+                <input class="userlogin" type="text" id="username" name="username" placeholder="Введите логин" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input class="pass" type="password" id="password" name="password" placeholder="Введите пароль" required>
+            </div>
+            <button type="submit" class="vhod">Войти</button>
+        </form>
+        <div class="links">
+            <a href="#">Забыли пароль?</a><br>
+            <a href="reg.html">Регистрация</a>
+        </div>
+    </div>
+    <footer style="margin-top: 385px;">
+        <p>&copy; 2023 Все права защищены.</p>
+        <p><a href="#">Контакты</a> | <a href="#">Политика конфиденциальности</a></p>
+        <p>+7(981)948-52-10</p>
+    </footer>
+</body>
+</html>
